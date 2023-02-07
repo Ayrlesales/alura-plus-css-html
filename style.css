@@ -53,26 +53,22 @@ body {
     margin: 16px 0 32px 0;
 }
 
-.botao_principal {
-    background-color: var(--botao-azul);
+.botao_grande {
     color: var(--branco-principal);
     border-radius: 8px;
     padding: 1em;
     text-decoration: none;
     display: block;
     margin: 16px auto 16px auto;
-    width: 512px;
+}
+
+.botao_principal {
+    background-color: var(--botao-azul);
 }
 
 .botao_secundario {
     color: var(--branco-principal);
     border: 1px solid var(--branco-principal);
-    border-radius: 8px;
-    padding: 1em;
-    text-decoration: none;
-    display: block;
-    margin: 16px auto 16px auto;
-    width: 512px;
 }
 
 .botao_grande:hover {
@@ -140,36 +136,29 @@ body {
 }
 
 .botao_combo:hover {
-    padding: 1.2em; 
+    padding: 1.2em;
+}
+
+.dispositivos_lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-top: 30px;
+}
+
+.dispositivos_titulo {
+    font-size: 48px;
 }
 
 .dispositivos {
-    display: flex;
-    justify-content: center;
-    margin: 100px 100px;
-}
-
-#tabela {
-    align-items: center;
-    justify-content: space-between;
     text-align: center;
-}
-
-.titulo_dispositivos {
-    font-size: 40px;
-    padding-bottom: 1em;
-    font-weight: 700;
-}
-
-.textoDispositivos {
-    font-size: 32px;
-    font-weight: 700;
+    margin-top: 50px;
 }
 
 .fim {
+    display: block;
     text-align: center;
-    justify-content: center;
-    margin: 150px 70px 50px 70px;
+    margin-top: 150px;
 }
 
 .lista_fim {
@@ -180,9 +169,9 @@ body {
 }
 
 .links_lista_fim {
-        text-decoration: none;
-        color: var(--branco-principal);
-        font-size: 16px;
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-size: 16px;
 }
 
 .links_lista_fim:hover {
@@ -193,4 +182,61 @@ body {
     margin: 1em 1em;
     color: var(--cinza-secundario);
     font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+        background-image: none;
+        margin: 0;
+    }
+
+    .principal {
+        width: 50vw;
+        text-align: center;
+    }
+
+    .posicao_botoes {
+        margin: 2em 2em;
+    }
+
+    .assista,
+    .posicao_textoAssista {
+        margin: 0;
+        text-align: center;
+    }
+
+    .img_combo,
+    .assitaCellPC,
+    .fotoCombo {
+        width: 50vw;
+    }
+
+    .dispositivos_lista {
+        display: block;
+    }
+
+    .fim,
+    .lista_fim {
+        display: block;
+    }
+
+    .posicao_textoCombo {
+        display: block;
+        text-align: center;
+        margin: 0;
+        order: 2;
+    }
+
+    .fotoCombo {
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+        order: 1;
+    }
+
+    .botao_combo,
+    .botao_grande {
+        width: 50vw;
+    }
 }
